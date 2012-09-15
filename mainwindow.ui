@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>674</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simulador Automata Finito Determinista</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>621</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Agregar/Editar Transición</string>
+    </property>
+    <widget class="QLabel" name="delta_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>21</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>(</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="coma_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>40</y>
+       <width>16</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>,</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>40</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>) =</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="estado">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>50</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Aqui debes ingresar el estado, un ejemplo seria qX donde X = 1, 2, 3,...n</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="simbolo">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Debes ingresar SOLO UNA letra en minúscula.</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="agregarTransicion">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>171</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Agregar Transicion</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="editarTransicion">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>90</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Editar Transicion</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="eliminarTransicion">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>90</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Eliminar Transicion</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="estadoLlegada">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>50</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Aqui debes ingresar el estado al que se llega, un ejemplo seria qX donde X = 1, 2, 3,...n</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="delta_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>31</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>delta.png</pixmap>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Palabra">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>0</y>
+      <width>211</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Palabra a evaluar:</string>
+    </property>
+    <widget class="QLabel" name="labelPalabraDeEntrada">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Palabra de Entrada:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="palabraDeEntrada">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="ingresarNuevoAutomata">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>241</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ingresar Nuevo Automata</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="Estados">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>401</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Estados:</string>
+    </property>
+    <widget class="QLabel" name="labelEstadoInicial">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Estado Inicial:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelEstadoFinal">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Estado Final:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="estadoInicial">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Aqui debes ingresar el estado inicial, un ejemplo seria qX donde X = 1, 2, 3,...n</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="estadoFinal">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>60</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Aqui debes ingresar el estado final, un ejemplo seria qX donde X = 1, 2, 3,...n. Si es mas de un estado final, debes ingresarlos separados por comas. p.e q2,q3....</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="verificarPalabra">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>430</y>
+      <width>241</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verificar Palabra</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tablaDeTransiciones">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>621</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="dragDropOverwriteMode">
+     <bool>false</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string>Lado izquierdo</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Lado derecho</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>674</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string/>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>estadoInicial</tabstop>
+  <tabstop>estadoFinal</tabstop>
+  <tabstop>palabraDeEntrada</tabstop>
+  <tabstop>estado</tabstop>
+  <tabstop>simbolo</tabstop>
+  <tabstop>estadoLlegada</tabstop>
+  <tabstop>agregarTransicion</tabstop>
+  <tabstop>editarTransicion</tabstop>
+  <tabstop>verificarPalabra</tabstop>
+  <tabstop>tablaDeTransiciones</tabstop>
+  <tabstop>eliminarTransicion</tabstop>
+  <tabstop>ingresarNuevoAutomata</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
